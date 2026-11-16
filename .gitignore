@@ -38,3 +38,7 @@ out/
 
 ### Documentos privados do líder (NÃO versionar) ###
 docs/lider/
+
+### Variáveis de ambiente locais (NÃO versionar) ###
+.env
+
