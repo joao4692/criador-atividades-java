@@ -1,3 +1,11 @@
 spring:
   application:
-    name: criador-atividades-java
+    name: criador-atividades
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:criador_atividades}
+    username: ${DB_USER:criador}
+    password: ${DB_PASSWORD:criador}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
