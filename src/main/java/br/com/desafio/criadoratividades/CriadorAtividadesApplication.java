@@ -9,4 +9,5 @@ public class CriadorAtividadesApplication {
     public static void main(String[] args) {
         SpringApplication.run(CriadorAtividadesApplication.class, args);
     }
+
 }
