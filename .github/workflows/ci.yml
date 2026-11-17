@@ -28,3 +28,18 @@ jobs:
 
       - name: Compilar, testar e gerar cobertura
         run: ./gradlew build
+
+  origem-da-main:
+    name: origem-da-main
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: PR para a main só pode vir da develop
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+        run: |
+          if [ "$HEAD_REF" != "develop" ]; then
+            echo "PR para a main só pode vir da develop (veio de: $HEAD_REF)"
+            exit 1
+          fi
+          echo "Origem ok: develop"
