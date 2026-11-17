@@ -1,0 +1,24 @@
+# Áreas sensíveis: qualquer pessoa pode alterar, mas o líder revisa.
+# Ver docs/lider/00-plano-mestre.md, seção 6.
+
+# Build e dependências
+/build.gradle           @joao4692
+/settings.gradle        @joao4692
+/gradle/                @joao4692
+/gradlew                @joao4692
+/gradlew.bat            @joao4692
+
+# CI, templates e este próprio arquivo
+/.github/               @joao4692
+
+# Configuração da aplicação e banco
+/src/main/resources/application*.yaml   @joao4692
+/src/main/resources/db/migration/       @joao4692
+
+# Infraestrutura local
+/docker-compose*.yml    @joao4692
+/Dockerfile             @joao4692
+
+# Classe principal e configuração global
+/src/main/java/br/com/desafio/criadoratividades/CriadorAtividadesApplication.java  @joao4692
+/src/main/java/br/com/desafio/criadoratividades/config/                           @joao4692
